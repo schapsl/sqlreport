@@ -1,0 +1,5 @@
+# Directories
+/vendor/
+
+#But never other .gitignores
+!**/.gitignore

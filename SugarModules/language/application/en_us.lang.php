@@ -39,3 +39,4 @@
 
 
 $app_list_strings['moduleList']['msg_SQLReport'] = 'SQLReport';
+$app_list_strings['moduleList']['msg_SQLReportParameter'] = 'SQLReportParameter';

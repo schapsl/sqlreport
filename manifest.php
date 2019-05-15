@@ -63,9 +63,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'SQLReport',
-  'published_date' => '2019-05-09 13:08:03',
+  'published_date' => '2019-05-15 07:57:14',
   'type' => 'module',
-  'version' => 1557407284,
+  'version' => 1557907035,
   'remove_tables' => 'prompt',
 );
 
@@ -81,12 +81,28 @@ $installdefs = array (
       'path' => 'modules/msg_SQLReport/msg_SQLReport.php',
       'tab' => true,
     ),
+    1 => 
+    array (
+      'module' => 'msg_SQLReportParameter',
+      'class' => 'msg_SQLReportParameter',
+      'path' => 'modules/msg_SQLReportParameter/msg_SQLReportParameter.php',
+      'tab' => false,
+    ),
   ),
   'layoutdefs' => 
   array (
+    0 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/layoutdefs/msg_sqlreportparameter_msg_sqlreport_msg_SQLReport.php',
+      'to_module' => 'msg_SQLReport',
+    ),
   ),
   'relationships' => 
   array (
+    0 => 
+    array (
+      'meta_data' => '<basepath>/SugarModules/relationships/relationships/msg_sqlreportparameter_msg_sqlreportMetaData.php',
+    ),
   ),
   'image_dir' => '<basepath>/icons',
   'copy' => 
@@ -96,20 +112,71 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/modules/msg_SQLReport',
       'to' => 'modules/msg_SQLReport',
     ),
+    1 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/msg_SQLReportParameter',
+      'to' => 'modules/msg_SQLReportParameter',
+    ),
   ),
   'language' => 
   array (
     0 => 
     array (
+      'from' => '<basepath>/SugarModules/relationships/language/msg_SQLReportParameter.php',
+      'to_module' => 'msg_SQLReportParameter',
+      'language' => 'en_us',
+    ),
+    1 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/msg_SQLReportParameter.php',
+      'to_module' => 'msg_SQLReportParameter',
+      'language' => 'de_DE',
+    ),
+    2 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/msg_SQLReport.php',
+      'to_module' => 'msg_SQLReport',
+      'language' => 'en_us',
+    ),
+    3 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/msg_SQLReport.php',
+      'to_module' => 'msg_SQLReport',
+      'language' => 'de_DE',
+    ),
+    4 => 
+    array (
       'from' => '<basepath>/SugarModules/language/application/de_DE.lang.php',
       'to_module' => 'application',
       'language' => 'de_DE',
     ),
-    1 => 
+    5 => 
     array (
       'from' => '<basepath>/SugarModules/language/application/en_us.lang.php',
       'to_module' => 'application',
       'language' => 'en_us',
+    ),
+  ),
+  'vardefs' => 
+  array (
+    0 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/vardefs/msg_sqlreportparameter_msg_sqlreport_msg_SQLReportParameter.php',
+      'to_module' => 'msg_SQLReportParameter',
+    ),
+    1 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/vardefs/msg_sqlreportparameter_msg_sqlreport_msg_SQLReport.php',
+      'to_module' => 'msg_SQLReport',
+    ),
+  ),
+  'layoutfields' => 
+  array (
+    0 => 
+    array (
+      'additional_fields' => 
+      array (
+      ),
     ),
   ),
 );

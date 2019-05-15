@@ -23,7 +23,7 @@ require_once 'modules/msg_SQLReportParameter/msg_SQLReportParameter.php';
             $new = array (
                 0 => array (
                     'name' => $id,
-                    'label' => $item->name,
+                    'label' => $item->name . ' - ' . $item->description,
                     'customCode' => "<input name='$id' id='$id' size='25' maxlength='25' type='text' value=''>",
                 ),
             );

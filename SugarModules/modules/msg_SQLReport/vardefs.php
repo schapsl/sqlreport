@@ -38,11 +38,12 @@
  ********************************************************************************/
 
 $dictionary['msg_SQLReport'] = array(
-	'table'=>'msg_sqlreport',
-	'audited'=>true,
-    'inline_edit'=>true,
-		'duplicate_merge'=>true,
-		'fields'=>array (
+  'table'=>'msg_sqlreport',
+  'audited'=>true,
+  'inline_edit'=>true,
+  'duplicate_merge'=>true,
+  'fields'=>
+  array (
   'sqlquery' => 
   array (
     'required' => true,
@@ -67,11 +68,12 @@ $dictionary['msg_SQLReport'] = array(
     'cols' => '40',
   ),
 ),
-	'relationships'=>array (
-),
-	'optimistic_locking'=>true,
-		'unified_search'=>true,
-	);
+  'relationships' =>
+  array (
+  ),
+  'optimistic_locking'=>true,
+  'unified_search'=>true,
+);
 if (!class_exists('VardefManager')){
         require_once('include/SugarObjects/VardefManager.php');
 }

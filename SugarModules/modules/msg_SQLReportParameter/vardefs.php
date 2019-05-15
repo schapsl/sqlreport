@@ -38,49 +38,50 @@
  ********************************************************************************/
 
 $dictionary['msg_SQLReportParameter'] = array(
-	'table'=>'msg_sqlreportparameter',
-	'audited'=>true,
-    'inline_edit'=>true,
-		'duplicate_merge'=>true,
-		'fields'=>array (
-  'position' => 
-  array (
-    'required' => true,
-    'name' => 'position',
-    'vname' => 'LBL_POSITION',
-    'type' => 'int',
-    'massupdate' => 0,
-    'default' => '1',
-    'no_default' => false,
-    'comments' => '',
-    'help' => '',
-    'importable' => 'true',
-    'duplicate_merge' => 'disabled',
-    'duplicate_merge_dom_value' => '0',
-    'audited' => true,
-    'inline_edit' => true,
-    'reportable' => true,
-    'unified_search' => false,
-    'merge_filter' => 'disabled',
-    'len' => '255',
-    'size' => '20',
-    'enable_range_search' => false,
-    'disable_num_format' => '1',
-    'min' => 1,
-    'max' => false,
-    'validation' => 
-    array (
-      'type' => 'range',
-      'min' => 1,
-      'max' => false,
+  'table'=>'msg_sqlreportparameter',
+  'audited'=>true,
+  'inline_edit'=>true,
+  'duplicate_merge'=>true,
+  'fields'=>
+      array (
+      'position' =>
+      array (
+        'required' => true,
+        'name' => 'position',
+        'vname' => 'LBL_POSITION',
+        'type' => 'int',
+        'massupdate' => 0,
+        'default' => '1',
+        'no_default' => false,
+        'comments' => '',
+        'help' => '',
+        'importable' => 'true',
+        'duplicate_merge' => 'disabled',
+        'duplicate_merge_dom_value' => '0',
+        'audited' => true,
+        'inline_edit' => true,
+        'reportable' => true,
+        'unified_search' => false,
+        'merge_filter' => 'disabled',
+        'len' => '255',
+        'size' => '20',
+        'enable_range_search' => false,
+        'disable_num_format' => '1',
+        'min' => 1,
+        'max' => false,
+        'validation' =>
+        array (
+          'type' => 'range',
+          'min' => 1,
+          'max' => false,
+        ),
+      ),
     ),
-  ),
+  'relationships'=>array (
 ),
-	'relationships'=>array (
-),
-	'optimistic_locking'=>true,
-		'unified_search'=>true,
-	);
+  'optimistic_locking'=>true,
+  'unified_search'=>true,
+);
 if (!class_exists('VardefManager')){
         require_once('include/SugarObjects/VardefManager.php');
 }

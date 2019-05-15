@@ -20,6 +20,15 @@ array (
           'field' => '30',
         ),
       ),
+      'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'DEFAULT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
     ),
     'panels' => 
     array (
@@ -27,16 +36,24 @@ array (
       array (
         0 => 
         array (
-          0 => 'name',
-          1 => 'assigned_user_name',
+          0 => 
+          array (
+            'name' => 'position',
+            'label' => 'LBL_POSITION',
+          ),
+          1 => 'name',
         ),
         1 => 
         array (
-          0 => 'description',
-          1 => 
+          0 => 
           array (
             'name' => 'msg_sqlreportparameter_msg_sqlreport_name',
           ),
+          1 => 'assigned_user_name',
+        ),
+        2 => 
+        array (
+          0 => 'description',
         ),
       ),
     ),

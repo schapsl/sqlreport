@@ -4,7 +4,7 @@
   "type": "project",
   "license": "GPL-3.0",
   "authors": [],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "config": {
     "vendor-dir": "vendor"
   },

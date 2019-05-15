@@ -63,9 +63,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'SQLReport',
-  'published_date' => '2019-05-09 13:07:59',
+  'published_date' => '2019-05-14 12:32:29',
   'type' => 'module',
-  'version' => 1557407280,
+  'version' => 1557837149,
   'remove_tables' => 'prompt',
 );
 

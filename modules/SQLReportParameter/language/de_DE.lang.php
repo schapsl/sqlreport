@@ -70,5 +70,5 @@ $mod_strings = array (
   'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Aktivitäten',
   'LBL_MSG_SQLREPORTPARAMETER_SUBPANEL_TITLE' => 'SQLReportParameter',
   'LBL_NEW_FORM_TITLE' => 'Neue SQLReportParameter',
-  'LBL_POSITION' => 'position',
+  'LBL_POSITION' => 'Position',
 );

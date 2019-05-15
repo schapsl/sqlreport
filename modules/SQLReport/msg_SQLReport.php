@@ -10,6 +10,8 @@ class msg_SQLReport extends msg_SQLReport_sugar {
 
     private static $mod_strings;
 
+    /** @var Link2 */
+    public $msg_sqlreportparameter_msg_sqlreport;
 
     public function __construct() {
         parent::__construct();

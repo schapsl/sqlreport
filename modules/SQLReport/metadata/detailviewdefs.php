@@ -4,7 +4,7 @@ global $mod_strings;
 $runReport = <<<HTML
 <input title="{$mod_strings['LBL_RUNREPORT']}" accessKey="B" class="button" type="submit" name="action"
  value="{$mod_strings['LBL_RUNREPORT']}"
-    onclick="window.open('index.php?module={$module_name}&action=run&record={\$fields.id.value}', '_blank');">
+    onclick="window.open('index.php?module={$module_name}&action=run&record={\$fields.id.value}', '_self');">
 HTML;
 $viewdefs[$module_name]['DetailView'] = array(
     'templateMeta' => array(

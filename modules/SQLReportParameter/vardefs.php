@@ -37,39 +37,43 @@
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  ********************************************************************************/
 
-$mod_strings = array (
-  'LBL_ASSIGNED_TO_ID' => 'Zugewiesene BenutzerID',
-  'LBL_ASSIGNED_TO_NAME' => 'Zugewiesen an',
-  'LBL_SECURITYGROUPS' => 'Berechtigungsgruppen',
-  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Berechtigungsgruppen',
-  'LBL_ID' => 'ID',
-  'LBL_DATE_ENTERED' => 'Erstellt am',
-  'LBL_DATE_MODIFIED' => 'Geändert am',
-  'LBL_MODIFIED' => 'Geändert von',
-  'LBL_MODIFIED_ID' => 'Geändert von ID',
-  'LBL_MODIFIED_NAME' => 'Geändert von Name',
-  'LBL_CREATED' => 'Erstellt von:',
-  'LBL_CREATED_ID' => 'Erstellt von ID:',
-  'LBL_DESCRIPTION' => 'Beschreibung',
-  'LBL_DELETED' => 'Gelöscht',
-  'LBL_NAME' => 'Name',
-  'LBL_CREATED_USER' => 'Erstellt von Benutzer:',
-  'LBL_MODIFIED_USER' => 'Geändert von',
-  'LBL_LIST_NAME' => 'Name',
-  'LBL_EDIT_BUTTON' => 'Bearbeiten',
-  'LBL_REMOVE' => 'Entfernen',
-  'LBL_LIST_FORM_TITLE' => 'SQLReport Liste',
-  'LBL_MODULE_NAME' => 'SQLReport',
-  'LBL_MODULE_TITLE' => 'SQLReport',
-  'LBL_HOMEPAGE_TITLE' => 'Mein SQLReport',
-  'LNK_NEW_RECORD' => 'Erstellen SQLReport',
-  'LNK_LIST' => 'Ansicht SQLReport',
-  'LNK_IMPORT_MSG_SQLREPORT' => 'Importieren SQLReport',
-  'LBL_SEARCH_FORM_TITLE' => 'Suchen SQLReport',
-  'LBL_HISTORY_SUBPANEL_TITLE' => 'Verlauf anzeigen',
-  'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Aktivitäten',
-  'LBL_MSG_SQLREPORT_SUBPANEL_TITLE' => 'SQLReport',
-  'LBL_NEW_FORM_TITLE' => 'Neue SQLReport',
-  'LBL_SQLQUERY' => 'SQL Query',
-  'LBL_RUNREPORT' => 'Bericht ausf&uuml;hren'
+$vardefs = array (
+  'fields' => 
+  array (
+    'position' => 
+    array (
+      'required' => true,
+      'name' => 'position',
+      'vname' => 'LBL_POSITION',
+      'type' => 'int',
+      'massupdate' => 0,
+      'default' => '1',
+      'no_default' => false,
+      'comments' => '',
+      'help' => '',
+      'importable' => 'true',
+      'duplicate_merge' => 'disabled',
+      'duplicate_merge_dom_value' => '0',
+      'audited' => true,
+      'inline_edit' => true,
+      'reportable' => true,
+      'unified_search' => false,
+      'merge_filter' => 'disabled',
+      'len' => '255',
+      'size' => '20',
+      'enable_range_search' => false,
+      'disable_num_format' => '1',
+      'min' => 1,
+      'max' => false,
+      'validation' => 
+      array (
+        'type' => 'range',
+        'min' => 1,
+        'max' => false,
+      ),
+    ),
+  ),
+  'relationships' => 
+  array (
+  ),
 );

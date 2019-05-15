@@ -1,4 +1,5 @@
 <?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
@@ -37,39 +38,18 @@
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  ********************************************************************************/
 
-$mod_strings = array (
-  'LBL_ASSIGNED_TO_ID' => 'Zugewiesene BenutzerID',
-  'LBL_ASSIGNED_TO_NAME' => 'Zugewiesen an',
-  'LBL_SECURITYGROUPS' => 'Berechtigungsgruppen',
-  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Berechtigungsgruppen',
-  'LBL_ID' => 'ID',
-  'LBL_DATE_ENTERED' => 'Erstellt am',
-  'LBL_DATE_MODIFIED' => 'Geändert am',
-  'LBL_MODIFIED' => 'Geändert von',
-  'LBL_MODIFIED_ID' => 'Geändert von ID',
-  'LBL_MODIFIED_NAME' => 'Geändert von Name',
-  'LBL_CREATED' => 'Erstellt von:',
-  'LBL_CREATED_ID' => 'Erstellt von ID:',
-  'LBL_DESCRIPTION' => 'Beschreibung',
-  'LBL_DELETED' => 'Gelöscht',
-  'LBL_NAME' => 'Name',
-  'LBL_CREATED_USER' => 'Erstellt von Benutzer:',
-  'LBL_MODIFIED_USER' => 'Geändert von',
-  'LBL_LIST_NAME' => 'Name',
-  'LBL_EDIT_BUTTON' => 'Bearbeiten',
-  'LBL_REMOVE' => 'Entfernen',
-  'LBL_LIST_FORM_TITLE' => 'SQLReport Liste',
-  'LBL_MODULE_NAME' => 'SQLReport',
-  'LBL_MODULE_TITLE' => 'SQLReport',
-  'LBL_HOMEPAGE_TITLE' => 'Mein SQLReport',
-  'LNK_NEW_RECORD' => 'Erstellen SQLReport',
-  'LNK_LIST' => 'Ansicht SQLReport',
-  'LNK_IMPORT_MSG_SQLREPORT' => 'Importieren SQLReport',
-  'LBL_SEARCH_FORM_TITLE' => 'Suchen SQLReport',
-  'LBL_HISTORY_SUBPANEL_TITLE' => 'Verlauf anzeigen',
-  'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Aktivitäten',
-  'LBL_MSG_SQLREPORT_SUBPANEL_TITLE' => 'SQLReport',
-  'LBL_NEW_FORM_TITLE' => 'Neue SQLReport',
-  'LBL_SQLQUERY' => 'SQL Query',
-  'LBL_RUNREPORT' => 'Bericht ausf&uuml;hren'
-);
+$module_name = 'msg_SQLReportParameter';
+$object_name = 'msg_SQLReportParameter';
+$_module_name = 'msg_sqlreportparameter';
+$popupMeta = array('moduleMain' => $module_name,
+						'varName' => $object_name,
+						'orderBy' => $_module_name.'.name',
+						'whereClauses' => 
+							array('name' => $_module_name . '.name', 
+								),
+						    'searchInputs'=> array($_module_name. '_number', 'name', 'priority','status'),
+							
+						);
+?>
+ 
+ 

@@ -37,39 +37,28 @@
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  ********************************************************************************/
 
-$mod_strings = array (
-  'LBL_ASSIGNED_TO_ID' => 'Zugewiesene BenutzerID',
-  'LBL_ASSIGNED_TO_NAME' => 'Zugewiesen an',
-  'LBL_SECURITYGROUPS' => 'Berechtigungsgruppen',
-  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Berechtigungsgruppen',
-  'LBL_ID' => 'ID',
-  'LBL_DATE_ENTERED' => 'Erstellt am',
-  'LBL_DATE_MODIFIED' => 'Geändert am',
-  'LBL_MODIFIED' => 'Geändert von',
-  'LBL_MODIFIED_ID' => 'Geändert von ID',
-  'LBL_MODIFIED_NAME' => 'Geändert von Name',
-  'LBL_CREATED' => 'Erstellt von:',
-  'LBL_CREATED_ID' => 'Erstellt von ID:',
-  'LBL_DESCRIPTION' => 'Beschreibung',
-  'LBL_DELETED' => 'Gelöscht',
-  'LBL_NAME' => 'Name',
-  'LBL_CREATED_USER' => 'Erstellt von Benutzer:',
-  'LBL_MODIFIED_USER' => 'Geändert von',
-  'LBL_LIST_NAME' => 'Name',
-  'LBL_EDIT_BUTTON' => 'Bearbeiten',
-  'LBL_REMOVE' => 'Entfernen',
-  'LBL_LIST_FORM_TITLE' => 'SQLReport Liste',
-  'LBL_MODULE_NAME' => 'SQLReport',
-  'LBL_MODULE_TITLE' => 'SQLReport',
-  'LBL_HOMEPAGE_TITLE' => 'Mein SQLReport',
-  'LNK_NEW_RECORD' => 'Erstellen SQLReport',
-  'LNK_LIST' => 'Ansicht SQLReport',
-  'LNK_IMPORT_MSG_SQLREPORT' => 'Importieren SQLReport',
-  'LBL_SEARCH_FORM_TITLE' => 'Suchen SQLReport',
-  'LBL_HISTORY_SUBPANEL_TITLE' => 'Verlauf anzeigen',
-  'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Aktivitäten',
-  'LBL_MSG_SQLREPORT_SUBPANEL_TITLE' => 'SQLReport',
-  'LBL_NEW_FORM_TITLE' => 'Neue SQLReport',
-  'LBL_SQLQUERY' => 'SQL Query',
-  'LBL_RUNREPORT' => 'Bericht ausf&uuml;hren'
-);
+/*
+ * Created on May 29, 2007
+ *
+ * To change the template for this generated file go to
+ * Window - Preferences - PHPeclipse - PHP - Code Templates
+ */
+$module_name = 'msg_SQLReportParameter';
+  $searchdefs[$module_name] = array(
+					'templateMeta' => array(
+							'maxColumns' => '3',
+  							'maxColumnsBasic' => '4', 
+                            'widths' => array('label' => '10', 'field' => '30'),                 
+                           ),
+                    'layout' => array(  					
+						'basic_search' => array(
+							'name', 
+							array('name'=>'current_user_only', 'label'=>'LBL_CURRENT_USER_FILTER', 'type'=>'bool'),
+							),
+						'advanced_search' => array(
+							'name', 
+							array('name' => 'assigned_user_id', 'label' => 'LBL_ASSIGNED_TO', 'type' => 'enum', 'function' => array('name' => 'get_user_array', 'params' => array(false))),
+						),
+					),
+ 			   );
+?>

@@ -71,5 +71,5 @@ $mod_strings = array (
   'LBL_MSG_SQLREPORT_SUBPANEL_TITLE' => 'SQLReport',
   'LBL_NEW_FORM_TITLE' => 'Neue SQLReport',
   'LBL_SQLQUERY' => 'SQL Query',
-  'LBL_RUNREPORT' => 'Bericht ausf&uuml;hren'
+  'LBL_RUNREPORT' => 'Bericht ausf&uuml;hren',
 );

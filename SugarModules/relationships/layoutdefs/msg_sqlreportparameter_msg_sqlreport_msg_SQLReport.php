@@ -4,7 +4,7 @@ $layout_defs["msg_SQLReport"]["subpanel_setup"]['msg_sqlreportparameter_msg_sqlr
   'module' => 'msg_SQLReportParameter',
   'subpanel_name' => 'default',
   'sort_order' => 'asc',
-  'sort_by' => 'id',
+  'sort_by' => 'position',
   'title_key' => 'LBL_MSG_SQLREPORTPARAMETER_MSG_SQLREPORT_FROM_MSG_SQLREPORTPARAMETER_TITLE',
   'get_subpanel_data' => 'msg_sqlreportparameter_msg_sqlreport',
   'top_buttons' => 
@@ -12,11 +12,6 @@ $layout_defs["msg_SQLReport"]["subpanel_setup"]['msg_sqlreportparameter_msg_sqlr
     0 => 
     array (
       'widget_class' => 'SubPanelTopButtonQuickCreate',
-    ),
-    1 => 
-    array (
-      'widget_class' => 'SubPanelTopSelectButton',
-      'mode' => 'MultiSelect',
     ),
   ),
 );

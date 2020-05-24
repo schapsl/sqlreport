@@ -1,5 +1,6 @@
 # Directories
 /vendor/
+/zips/
 
 #But never other .gitignores
 !**/.gitignore

@@ -10,7 +10,7 @@ $subpanel_layout = array (
     1 => 
     array (
       'widget_class' => 'SubPanelTopSelectButton',
-      'popup_module' => $module_name,
+      'popup_module' => 'msg_SQLReportParameter',
     ),
   ),
   'where' => '',
@@ -48,7 +48,7 @@ $subpanel_layout = array (
     array (
       'vname' => 'LBL_EDIT_BUTTON',
       'widget_class' => 'SubPanelEditButton',
-      'module' => $module_name,
+      'module' => 'msg_SQLReportParameter',
       'width' => '4%',
       'default' => true,
     ),
@@ -56,7 +56,7 @@ $subpanel_layout = array (
     array (
       'vname' => 'LBL_REMOVE',
       'widget_class' => 'SubPanelRemoveButton',
-      'module' => $module_name,
+      'module' => 'msg_SQLReportParameter',
       'width' => '5%',
       'default' => true,
     ),

@@ -1,4 +1,5 @@
 <?php
+// created: 2019-11-11 16:36:01
 $dictionary["msg_SQLReport"]["fields"]["msg_sqlreportparameter_msg_sqlreport"] = array (
   'name' => 'msg_sqlreportparameter_msg_sqlreport',
   'type' => 'link',

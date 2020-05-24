@@ -1,11 +1,8 @@
 <?php
-$module_name = 'msg_SQLReportParameter';
-$object_name = 'msg_SQLReportParameter';
-$_module_name = 'msg_sqlreportparameter';
 $popupMeta = array (
-    'moduleMain' => $module_name,
-    'varName' => $object_name,
-    'orderBy' => $_module_name.'.name',
+    'moduleMain' => 'msg_SQLReportParameter',
+    'varName' => 'msg_SQLReportParameter',
+    'orderBy' => 'msg_sqlreportparameter.name',
     'whereClauses' => array (
   'name' => 'msg_sqlreportparameter.name',
   'msg_sqlreportparameter_msg_sqlreport_name' => 'msg_sqlreportparameter.msg_sqlreportparameter_msg_sqlreport_name',

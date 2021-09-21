@@ -1,5 +1,5 @@
 <?php
- // created: 2019-11-11 16:36:01
+ // created: 2021-09-21 15:55:23
 $layout_defs["msg_SQLReport"]["subpanel_setup"]['msg_sqlreportparameter_msg_sqlreport'] = array (
   'order' => 100,
   'module' => 'msg_SQLReportParameter',

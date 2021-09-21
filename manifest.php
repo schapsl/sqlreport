@@ -63,9 +63,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'SQLReport',
-  'published_date' => '2021-09-21 13:55:21',
+  'published_date' => '2021-09-21 14:21:09',
   'type' => 'module',
-  'version' => 1632232523,
+  'version' => 1632234072,
   'remove_tables' => 'prompt',
 );
 
@@ -112,15 +112,10 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/modules/msg_SQLReport',
       'to' => 'modules/msg_SQLReport',
     ),
-    1 =>
+    1 => 
     array (
       'from' => '<basepath>/SugarModules/modules/msg_SQLReportParameter',
       'to' => 'modules/msg_SQLReportParameter',
-    ),
-    2 =>
-    array (
-      'from' => '<basepath>/SugarModules/vendor',
-      'to' => 'modules/msg_SQLReport/vendor',
     ),
   ),
   'language' => 

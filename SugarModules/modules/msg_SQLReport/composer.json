@@ -1,0 +1,15 @@
+{
+  "name": "nsg/sqlreport",
+  "description": "SQLReport",
+  "type": "project",
+  "license": "GPL-3.0",
+  "authors": [],
+  "minimum-stability": "stable",
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "require": {
+    "phpoffice/phpspreadsheet": "*"
+  },
+  "prefer-stable": true
+}

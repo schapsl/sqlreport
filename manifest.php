@@ -117,6 +117,11 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/modules/msg_SQLReportParameter',
       'to' => 'modules/msg_SQLReportParameter',
     ),
+    2 =>
+    array (
+      'from' => '<basepath>/custom',
+      'to' => 'custom',
+    ),
   ),
   'language' => 
   array (

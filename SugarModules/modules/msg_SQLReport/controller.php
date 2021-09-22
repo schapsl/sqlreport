@@ -47,16 +47,16 @@ class msg_SQLReportController extends SugarController {
 
     /**
      * @param array $sqlParameter
+     * @noinspection NullPointerExceptionInspection
      */
     private function runReport($sqlParameter){
         try{
-            /** @var msg_SQLReport $report */
             $report= $this->bean;
             $sql = htmlspecialchars_decode($report->sqlquery, ENT_QUOTES);
             $db= DBManagerFactory::getInstance();
             $res= $db->pQuery($sql, $sqlParameter);
             if( false === $res ) {
-                throw new Exception('DB-Fehler: Die Anzahl Parameter stimmt nicht mit der Anzahl der Platzhalter überein');
+                throw new Exception('DB-Fehler: '. $db->lastError());
             }
             $row= $db->fetchRow($res);
             if(!$row) {

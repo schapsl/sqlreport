@@ -1,4 +1,6 @@
-<?php
+<?php /** @noinspection AutoloadingIssuesInspection */
+
+/** @noinspection PhpMultipleClassDeclarationsInspection */
 
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -23,20 +25,20 @@ class msg_SQLReportController extends SugarController {
      */
     public function action_run(){
         $this->bean->load_relationship('msg_sqlreportparameter_msg_sqlreport');
-        $parameterMisssing= false;
+        $parameterMissing= false;
         $parameter = $this->bean->msg_sqlreportparameter_msg_sqlreport->getBeans();
         $sqlParameter= array();
         if(isset($parameter) && is_array($parameter ) && !empty(array_filter($parameter))) {
             foreach ($parameter as /** @var msg_SQLReportParameter $item */ $item) {
-                if (!isset($_REQUEST[$item->getNameAsId()])) {
-                    $parameterMisssing = true;
+                if (!isset($_REQUEST[$item->id])) {
+                    $parameterMissing = true;
                     break;
                 }
                 // Zero-based: -1
-                $sqlParameter[ $item->position - 1 ]= $_REQUEST[$item->getNameAsId()];
+                $sqlParameter[ $item->position - 1 ]= $_REQUEST[$item->id];
             }
         }
-        if(!$parameterMisssing){
+        if(!$parameterMissing){
             $this->runReport($sqlParameter);
         } else {
             $this->view = 'run';

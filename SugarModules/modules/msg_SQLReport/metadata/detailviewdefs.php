@@ -19,32 +19,34 @@ $viewdefs[$module_name]['DetailView'] = array(
             array('label' => '10', 'field' => '30')
         ),
     ),
+    'useTabs' => false,
+    'tabDefs' => array(
+        'LBL_MODULE_NAME' => array(
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+        ),
+    ),
     'panels' => array(
-        array(
-            'name',
-            'assigned_user_name',
-        ),
-        array(
-            'description',
-        ),
-        array(
-            0 => array (
-                'name' => 'sqlquery',
-                'studio' => 'visible',
-                'label' => 'LBL_SQLQUERY',
+        'LBL_MODULE_NAME' => array(
+            0 => array(
+                0 => 'name',
+                1 => 'assigned_user_name',
+            ),
+            1 => array(
+                0 => 'description',
+            ),
+            2 => array(
+                0 => array(
+                    'name' => 'date_entered',
+                    'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
+                    'label' => 'LBL_DATE_ENTERED',
+                ),
+                1 => array(
+                    'name' => 'date_modified',
+                    'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
+                    'label' => 'LBL_DATE_MODIFIED',
+                ),
             ),
         ),
-        array(
-            array(
-                'name' => 'date_entered',
-                'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
-                'label' => 'LBL_DATE_ENTERED',
-            ),
-            array(
-                'name' => 'date_modified',
-                'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
-                'label' => 'LBL_DATE_MODIFIED',
-            ),
-        ),
-    )
+    ),
 );

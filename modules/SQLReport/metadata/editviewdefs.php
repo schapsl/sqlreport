@@ -9,21 +9,22 @@ $viewdefs[$module_name]['EditView'] = array(
     ),
     'panels' => array(
         'default' => array(
-            array(
+            0 => array(
                 'name',
                 'assigned_user_name',
             ),
-            array(
+            1 => array(
                 'description',
             ),
-            array(
+            2 => array(
                 0 => array (
                     'name' => 'sqlquery',
                     'studio' => 'visible',
                     'label' => 'LBL_SQLQUERY',
                     'displayParams' => array(
                         'rows' => 10,
-                        'cols' => 80,
+                        'cols' => 160,
+                        'style' => 'width:120%;',
                     ),
                 ),
             ),

@@ -1,5 +1,5 @@
-<?php /** @noinspection AutoloadingIssuesInspection */
-
+<?php
+/** @noinspection AutoloadingIssuesInspection */
 /** @noinspection PhpMultipleClassDeclarationsInspection */
 
 use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -30,12 +30,12 @@ class msg_SQLReportController extends SugarController {
         $sqlParameter= array();
         if(isset($parameter) && is_array($parameter ) && !empty(array_filter($parameter))) {
             foreach ($parameter as /** @var msg_SQLReportParameter $item */ $item) {
-                if (!isset($_REQUEST[$item->id])) {
+                if (!isset($_REQUEST[$item->getNameAsId()])) {
                     $parameterMissing = true;
                     break;
                 }
                 // Zero-based: -1
-                $sqlParameter[ $item->position - 1 ]= $_REQUEST[$item->id];
+                $sqlParameter[ $item->position - 1 ]= $_REQUEST[$item->getNameAsId()];
             }
         }
         if(!$parameterMissing){
@@ -56,7 +56,7 @@ class msg_SQLReportController extends SugarController {
             $db= DBManagerFactory::getInstance();
             $res= $db->pQuery($sql, $sqlParameter);
             if( false === $res ) {
-                throw new Exception('DB-Fehler: '. $db->lastError());
+                throw new Exception('DB-Fehler: Die Anzahl Parameter stimmt nicht mit der Anzahl der Platzhalter überein');
             }
             $row= $db->fetchRow($res);
             if(!$row) {

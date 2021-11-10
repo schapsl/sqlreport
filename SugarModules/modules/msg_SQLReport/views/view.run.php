@@ -21,12 +21,12 @@ require_once 'modules/msg_SQLReportParameter/msg_SQLReportParameter.php';
         /** @var msg_SQLReport $bean */
         $parameter= $this->bean->msg_sqlreportparameter_msg_sqlreport->getBeans();
         foreach ($parameter as /** @var msg_SQLReportParameter $item */ $item ){
-            $id= $item->getNameAsId();
+            $id= $item->id;
             $new = array (
                 0 => array (
                     'name' => $id,
                     'label' => $item->name . ' - ' . $item->description,
-                    'customCode' => "<input name='$id' id='$id' size='25' maxlength='25' type='text' value=''>",
+                    'customCode' => "<input name='$id' id='$id' size='255' maxlength='255' type='text' value=''>",
                 ),
             );
             $viewdefs[ $this->ev->module][ $this->ev->view]['panels']['default'][] = $new;

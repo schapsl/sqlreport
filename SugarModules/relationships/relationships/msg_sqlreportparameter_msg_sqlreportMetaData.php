@@ -1,5 +1,4 @@
 <?php
-// created: 2021-09-21 16:21:15
 $dictionary["msg_sqlreportparameter_msg_sqlreport"] = array (
   'true_relationship_type' => 'one-to-many',
   'relationships' => 

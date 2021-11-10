@@ -30,12 +30,12 @@ class msg_SQLReportController extends SugarController {
         $sqlParameter= array();
         if(isset($parameter) && is_array($parameter ) && !empty(array_filter($parameter))) {
             foreach ($parameter as /** @var msg_SQLReportParameter $item */ $item) {
-                if (!isset($_REQUEST[$item->getNameAsId()])) {
+                if (!isset($_REQUEST[$item->id])) {
                     $parameterMissing = true;
                     break;
                 }
                 // Zero-based: -1
-                $sqlParameter[ $item->position - 1 ]= $_REQUEST[$item->getNameAsId()];
+                $sqlParameter[ $item->position - 1 ]= $_REQUEST[$item->id];
             }
         }
         if(!$parameterMissing){
@@ -56,7 +56,7 @@ class msg_SQLReportController extends SugarController {
             $db= DBManagerFactory::getInstance();
             $res= $db->pQuery($sql, $sqlParameter);
             if( false === $res ) {
-                throw new Exception('DB-Fehler: Die Anzahl Parameter stimmt nicht mit der Anzahl der Platzhalter überein');
+                throw new Exception('DB-Fehler: '. $db->lastError());
             }
             $row= $db->fetchRow($res);
             if(!$row) {

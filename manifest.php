@@ -69,11 +69,9 @@ $manifest = array (
   'remove_tables' => 'prompt',
 );
 
-
 $installdefs = array (
   'id' => 'SQLReport',
-  'beans' => 
-  array (
+  'beans' => array (
     0 => 
     array (
       'module' => 'msg_SQLReport',
@@ -89,42 +87,39 @@ $installdefs = array (
       'tab' => false,
     ),
   ),
-  'layoutdefs' => 
-  array (
+  'layoutdefs' => array (
     0 => 
     array (
       'from' => '<basepath>/SugarModules/relationships/layoutdefs/msg_sqlreportparameter_msg_sqlreport_msg_SQLReport.php',
       'to_module' => 'msg_SQLReport',
     ),
   ),
-  'relationships' => 
-  array (
+  'relationships' => array (
     0 => 
     array (
       'meta_data' => '<basepath>/SugarModules/relationships/relationships/msg_sqlreportparameter_msg_sqlreportMetaData.php',
     ),
   ),
   'image_dir' => '<basepath>/icons',
-  'copy' => 
-  array (
-    0 => 
-    array (
+  'copy' => array (
+    0 => array (
       'from' => '<basepath>/SugarModules/modules/msg_SQLReport',
       'to' => 'modules/msg_SQLReport',
     ),
-    1 => 
-    array (
+    1 => array (
       'from' => '<basepath>/SugarModules/modules/msg_SQLReportParameter',
       'to' => 'modules/msg_SQLReportParameter',
     ),
-    2 =>
-    array (
+    2 => array (
       'from' => '<basepath>/custom',
       'to' => 'custom',
     ),
+    3 => array (
+      'from' => '<basepath>/css',
+      'to' => 'custom/themes/' . SugarThemeRegistry::current() . '/css/' . SugarThemeRegistry::getSubThemeDefault(),
+    ),
   ),
-  'language' => 
-  array (
+  'language' => array (
     0 => 
     array (
       'from' => '<basepath>/SugarModules/relationships/language/msg_SQLReportParameter.php',
@@ -162,8 +157,7 @@ $installdefs = array (
       'language' => 'en_us',
     ),
   ),
-  'vardefs' => 
-  array (
+  'vardefs' => array (
     0 => 
     array (
       'from' => '<basepath>/SugarModules/relationships/vardefs/msg_sqlreportparameter_msg_sqlreport_msg_SQLReportParameter.php',
@@ -175,8 +169,7 @@ $installdefs = array (
       'to_module' => 'msg_SQLReport',
     ),
   ),
-  'layoutfields' => 
-  array (
+  'layoutfields' => array (
     0 => 
     array (
       'additional_fields' => 
@@ -185,3 +178,5 @@ $installdefs = array (
     ),
   ),
 );
+
+SugarThemeRegistry::clearAllCaches();

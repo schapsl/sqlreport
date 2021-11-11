@@ -37,3 +37,6 @@ The position has to matcht the position of the dedicated placeholder in the quer
 ## License
 
 This software is licensed under the GNU AFFERO GENERAL PUBLIC LICENSE v3
+
+## Disclaimer
+This software comes with no warranty. Use at your own risk!

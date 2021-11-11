@@ -13,13 +13,27 @@ This modules is for executable SQL reports. Each reports consists of a
 * name, 
 * description and 
 * SQL query.
-
 Because of the security implication and the necessary knowledge of the data model,
 only administrator should be allowed to create and edit SQLReports and subsequent SQReportParameters.
 
 The SQL query can be parametized. For each parameter there must be the placeholder ? in the query.
 If you want to use the same value multiple times, each occurance must have it's own placeholder
 and the value has to be entered later on each time seperately.
+
+The placeholder substitution escapse SQL reserved characters.
+
+### Example query
+
+Simple example for a query with one parameter.
+
+```
+SELECT name as Name from accounts WHERE name LIKE '?%'
+```
+
+Of course, the result of the example is trivial an can be achieved much easier with onboard tools.
+But you can use the whole complexity of SQL for your reports.
+
+### Run report
 
 In the detail view, you have the action to 'run' the report.
 If the query has SQLReportParameters associated, the next view will be a form, where you can enter the parameter values.

@@ -14,9 +14,9 @@ This modules is for executable SQL reports. Each reports consists of a
 * description and 
 * SQL query.
 Because of the security implication and the necessary knowledge of the data model,
-only administrator should be allowed to create and edit SQLReports and subsequent SQReportParameters.
+only administrators should be allowed to create and edit SQLReports and subsequent SQLReportParameters.
 
-The SQL query can be parametized. For each parameter there must be the placeholder ? in the query.
+The SQL query can be parameterized. For each parameter there must be the placeholder ? in the query.
 If you want to use the same value multiple times, each occurance must have it's own placeholder
 and the value has to be entered later on each time seperately.
 
@@ -46,7 +46,7 @@ An SQLReportParameter consists of a
 * description and a
 * position as number.
 
-The position has to matcht the position of the dedicated placeholder in the query.
+The position has to match the position of the dedicated placeholder in the query.
 
 ## License
 
